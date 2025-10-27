@@ -1,7 +1,7 @@
 Sharding = splitting a large database into smaller, faster and more manageable pieces called shards
 Each shard is a self-contained database with a subset of the total data.
 
-Why <code style="color : red">Sharding</code>
+Why Sharding
 When the database grows too large, we hit limits in:
   - storage
   - performance
