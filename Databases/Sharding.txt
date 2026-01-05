@@ -1,7 +1,7 @@
 Sharding = splitting a large database into smaller, faster and more manageable pieces called shards
 Each shard is a self-contained database with a subset of the total data.
 
-Why Sharding
+Why Sharding:
 When the database grows too large, we hit limits in:
   - storage
   - performance
@@ -28,8 +28,8 @@ step3: Each shard is separate database
 Each shard runs on it's own physical/virtual instance (e.g postgreSQL, MySQL etc)
 The application connects to the right shard based on the key
 
-Here, we can get a doubt what if two hashes (say, two file hashes or key hashes) map to the same shard of the same position in th ring?
-Multiple files going to the same shard is not a collision -it's just the hash function distribution the load.
+what if two hashes (say, two file hashes or key hashes) map to the same shard of the same position in the ring?
+Multiple files going to the same shard is not a collision -it's just the hash function distributing the load.
 As long as distribution is uniform, that is fine.
 
 What we want to avoid is too many hashes/keys skewed to one shard - that's called data skew or hot shard
@@ -37,5 +37,3 @@ we can solve that by:
   - using a good hash function - sha256, MurmurHash3, etc
   - using virtual nodes(vnodes) to distribute keys more evenly
   - optionally, adding salting or consistent hasing relabalnaces the shards
-
-
