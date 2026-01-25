@@ -10,7 +10,7 @@ When the database grows too large, we hit limits in:
 Shards scales horizontally - we can add more servers to handle more data
 
 How Sharing works
-Let's say you have a Users table with 1billion users
+Let's say you have a Users table with 1 billion users
 step1: choose a shard key
 A shard key determines which shard each record belongs to
 Examples:
