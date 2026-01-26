@@ -1,3 +1,6 @@
 Microservices
 Loosely coupled independent services
-Microservices is an approach to developing a single application as a suite of small services, each running in it's own process and communicating with light weight mechanisms built around business capabilities andindependently deployable by fully automated deployment
+Microservices is an approach to developing a single application as a suite of small services, 
+each running in it's own process 
+and communicating with light weight mechanisms built around business capabilities and
+independently deployable by fully automated deployment
