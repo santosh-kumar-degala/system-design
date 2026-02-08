@@ -1,6 +1,7 @@
 API Gateway is a single entry point for all client requests. Handles routing, filtering, and load balancing.
 
-An API gateway is a server that acts as an API front-end, receiving API requests, enforcing throttling and security policies, passing requests to the back-end service, and then returning the appropriate result to the client. 
+An API gateway is a server that acts as an API front-end, receiving API requests, enforcing throttling and security policies, 
+passing requests to the back-end service, and then returning the appropriate result to the client. 
  
 It is essentially a middleman between the client and the server, managing and optimizing API traffic. 
 
