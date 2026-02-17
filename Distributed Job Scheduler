@@ -1,0 +1,5 @@
+A Distributed Job Scheduler is a system that coordinates, schedules, and executes jobs across multiple machines (workers) instead of a single server. 
+It ensures jobs run reliably, at scale, and on time, even when machines fail.
+
+It powers things like: sending bulk emails, processing uploaded files, generating nightly reports, running ML pipelines, or any task that shouldn't block your main application.
+
