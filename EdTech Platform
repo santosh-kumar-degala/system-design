@@ -1,0 +1,44 @@
+Design an EdTech platform like Udemy, Pluralsight
+Functional requirements:
+There are two types of users: learners and creators. 
+1. Users should be able to sign up and access the system securely 
+2. Creators should be able to create learning content 
+3. Content can be combinations of rich text, images, videos and audio 
+4. Multi-Platform Access: The system should be usable via a web browser and native applications (desktop and mobile). 
+Non functional requirements:
+1. Scalability
+2. Reliability
+3. Maintainability 
+4. Security focused
+5. Availability
+
+Users/learners login - authentication service takes care of handling the authentication and authorization
+Here since there are two core entities - learners and creators
+Two roles - we can implement simple IAM service - RBAC - Role Based Access Control, learners should be able to view the course but cannot edit or delete them
+creators can upload the courses but cannot manage the feedback provided by learners
+
+API gateway --> routes the request to the auth service
+
+WAF - Web Application firewall , HTTPS - encrypted
+
+Content service --> search the required content from a blob storage (s3) and provide it back to the learner
+
+CDN - Content Delivery Network to the edge locations
+
+Creators will upload the course content like images, videos, assessement - rich text, quizes to blob storage. Pre-signed url 
+
+PostgresSQL
+two tables - 
+learners table - user_id, course_id, creator_id(optiona (l)
+Creatora table - user_id, course_id, presigned_url(reference to blob storage)
+
+Database sharding - partition course_id
+
+PII - Personally Identif
+
+Creators request an upload from the backend, which creates an asset record and returns a short-lived pre-signed URL. The object is uploaded to a private S3 bucket using a server-generated key, then scanned and validated before being marked ready.
+
+
+
+
+
