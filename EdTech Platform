@@ -34,7 +34,7 @@ Creatora table - user_id, course_id, presigned_url(reference to blob storage)
 
 Database sharding - partition course_id
 
-PII - Personally Identif
+PII - Personally Identifable Information
 
 Creators request an upload from the backend, which creates an asset record and returns a short-lived pre-signed URL. The object is uploaded to a private S3 bucket using a server-generated key, then scanned and validated before being marked ready.
 
